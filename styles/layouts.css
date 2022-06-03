@@ -3,7 +3,6 @@
 
 .content-wrap{
   width: 100vw;
-  height: 100vh;
   background-color: var(--light);
 
   display: flex;
@@ -20,13 +19,32 @@
 ###########################################################################  */
 
 .card{
-  width: 50%;
+  width: max(50vw, 600px);
   background-color: var(--lightest);
   border-radius: var(--radius-m);
   overflow: hidden;
   box-shadow: var(--n-shadow-l);
+  margin: var(--m);
+}
+
+.card img{
+  width: 100%;
+  aspect-ratio: 2/1;
+  object-fit: cover;
 }
 
 .card figcaption{
   padding: var(--l) var(--m) var(--xl) var(--m);
 }
+
+
+@media (orientation: landscape) {
+  .card{
+    display: flex;
+  }
+
+  .card img{
+    width: 300px;
+    aspect-ratio: 1/1;
+  }
+} 

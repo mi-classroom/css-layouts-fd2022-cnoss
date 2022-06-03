@@ -15,6 +15,7 @@ body{
   color: var(--color-text);
   hyphens: auto;
   background-color: var(--lightest);
+  transition: all var(--tr-fast);
 }
 
 
